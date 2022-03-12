@@ -3,7 +3,7 @@
 <head>
     <title>Amicable Numbers</title>
     <meta charset="UTF-8">
-    <script>
+    <script type="text/javascript">
         function isAFactor(x, y) {
             if (x % y == 0) return true;
             return false;
@@ -16,18 +16,20 @@
             return sum;
         }
     </script>
-    
+    <style type="text/css">
+        div {display: inline-block; padding: 0.5em; margin: 0.5}
+    </style>
 </head>
 
 <body>
+    <div id="form">
     <form>
-        <input type="text" id="num1" name="num1">
-        <input type="text" id="num2" name="num2">
-        <input type="button" onclick="run()">
-    </form>
+        Number 1: <input type="text" id="num1" name="num1">
+        Number2: <input type="text" id="num2" name="num2">
+        <input type="button">
+    </form></div>
     
     <script type="text/javascript">
-        function run() {
         num1 = document.getElementByName("num1");
         num2 = document.getElementByName("num2");
         
@@ -49,8 +51,7 @@
             document.getElementById('result').innerHTML = 'The numbers: ${num1} and ${num2} are amicable';
         }
 
-        document.getElementById('factors').innerHTML = 'Factors of ${num2} are ${factors1.join(', ')} <br/> Factors of ${num2} are ${factors2.join(', ')}';
-        }
+        document.getElementById('factors').innerHTML = 'Factors of ${num2} are ${factors1.join(', ')}; Factors of ${num2} are ${factors2.join(', ')}';
 
     </script>
 
