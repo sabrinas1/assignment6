@@ -26,8 +26,6 @@
     </form>
     
     <script type="text/javascript">
-        document.getElementById("num1").innerHTML = num1;
-        document.getElementById("num2").innerHTML = num2;
         
         factors1 = [1];
         for (var i = 2; i <= num1; i++) {
@@ -41,15 +39,18 @@
         }
         sum2 = sum(factors2);
 
-        if (sum1 != num2 || sum2 != num1) document.getElementById('bool').innerHTML = not;
+        if (sum1 != num2 || sum2 != num1) {
+            document.getElementById('bool').innerHTML = "The numbers: " + num1 + " and " + num2 + "are not amicable";
+        } else {
+            document.getElementById('bool').innerHTML = "The numbers: " + num1 + " and " + num2 + "are amicable";
+        }
 
-        document.getElementById('factors1').innerHTML = factors1.join(', ');
-        document.getElementById('factors2').innerHTML = factors2.join(', ');
+        document.getElementById('factors').innerHTML = "Factors of " + num1 + " are " + factors1.join(', ') + "<br/> Factors of " + num2 + " are " + factors2.join(', ');
+        
 
     </script>
 
-    <div id="result">The numbers: <span id="num1"></span> and <span id="num2"></span> are <span id="bool"></span> amicable</div>
-    <div id="factors">Factors of <span id="num1"></span> are <span id="factors1"></span></div>
-    <div id="factors">Factors of <span id="num2"></span> are <span id="factors2"></span></div>
+    <div id="result"></div>
+    <div id="factors"></div>
 </body>
 </html>
