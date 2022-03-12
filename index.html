@@ -26,15 +26,18 @@
     <div id="form">
     <form>
         Number 1: <input type="text" id="num1" name="num1">
-        Number2: <input type="text" id="num2" name="num2">
-        <input type="button">
+        Number 2: <input type="text" id="num2" name="num2">
+        <input type="button" onclick="setVals(num1, num2)">
     </form></div>
     
     <script type="text/javascript">
-        num1 = document.getElementByName("num1").value;
-        num2 = document.getElementByName("num2").value;
+        function setVals(x, y) {
+            num1 = x; num2 = y;
+        }
+        // num1 = document.getElementByName("num1").value;
+        // num2 = document.getElementByName("num2").value;
 
-        document.write(num1);
+        // document.write(num1);
         
         factors1 = [1];
         for (var i = 2; i <= num1; i++) {
