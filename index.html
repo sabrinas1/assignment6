@@ -16,9 +16,7 @@
             return sum;
         }
     </script>
-    <style type="text/css">
-        div {display: block}
-    </style>
+    
 </head>
 
 <body>
@@ -46,12 +44,12 @@
         sum2 = sum(factors2);
 
         if (sum1 != num2 || sum2 != num1) {
-            document.getElementById('result').innerHTML = "The numbers: " + num1 + " and " + num2 + "are not amicable";
+            document.getElementById('result').innerHTML = 'The numbers: ${num1} and ${num2} are not amicable';
         } else {
-            document.getElementById('result').innerHTML = 'The numbers: ' + num1 + " and " + num2 + "are amicable";
+            document.getElementById('result').innerHTML = 'The numbers: ${num1} and ${num2} are amicable';
         }
 
-        document.getElementById('factors').innerHTML = "Factors of " + num1 + " are " + factors1.join(', ') + "<br/> Factors of " + num2 + " are " + factors2.join(', ');
+        document.getElementById('factors').innerHTML = 'Factors of ${num2} are ${factors1.join(', ')} <br/> Factors of ${num2} are ${factors2.join(', ')}';
         
 
     </script>
