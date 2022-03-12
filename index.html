@@ -48,8 +48,9 @@
             document.write('sum: ' + add1);
 
             let factors2 = [1];
-            for (var i = 2; i < num2; i++) {
-                if (isAFactor(num2, i) == true) factors2.push(i);
+            for (var j = 2; j < num2; j++) {
+                if (isAFactor(num2, j) == true) factors .push(j);
+                document.write(j + ' ');
             }
             var add2 = 0;
             add2 = sum(factors2);
