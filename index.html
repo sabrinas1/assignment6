@@ -45,7 +45,6 @@
             }
             var add1 = 0;
             add1 = sum(factors1);
-            document.write('sum1: ' + add1);
 
             let factors2 = [1];
             for (var j = 2; j < num2; j++) {
@@ -53,7 +52,6 @@
             }
             var add2 = 0;
             add2 = sum(factors2);
-            document.write('sum2: ' + add2);
 
             if (add1 != num2 || add2 != num1) {
                 document.getElementById('result').innerHTML = 'The numbers: ${num1} and ${num2} are not amicable';
