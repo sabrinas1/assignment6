@@ -51,9 +51,11 @@
             for (var i = 2; i < num2; i++) {
                 if (isAFactor(num1, i) == true) factors2.push(i);
             }
-            var sum2 = sum(factors2);
+            var add2 = 0;
+            add2 = sum(factors2);
+            document.write('sum: ' + add2);
 
-            if (sum1 != num2 || sum2 != num1) {
+            if (add1 != num2 || add2 != num1) {
                 document.getElementById('result').innerHTML = 'The numbers: ${num1} and ${num2} are not amicable';
             } else {
                 document.getElementById('result').innerHTML = 'The numbers: ${num1} and ${num2} are amicable';
