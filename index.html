@@ -17,7 +17,7 @@
         }
     </script>
     <style type="text/css">
-        
+        div {display: block}
     </style>
 </head>
 
@@ -48,7 +48,7 @@
         if (sum1 != num2 || sum2 != num1) {
             document.getElementById('result').innerHTML = "The numbers: " + num1 + " and " + num2 + "are not amicable";
         } else {
-            document.getElementById('result').innerHTML = "The numbers: " + num1 + " and " + num2 + "are amicable";
+            document.getElementById('result').innerHTML = 'The numbers: ' + num1 + " and " + num2 + "are amicable";
         }
 
         document.getElementById('factors').innerHTML = "Factors of " + num1 + " are " + factors1.join(', ') + "<br/> Factors of " + num2 + " are " + factors2.join(', ');
@@ -56,7 +56,7 @@
 
     </script>
 
-    <div id="result">abbbbba</div>
+    <div id="result"></div>
     <div id="factors"></div>
 </body>
 </html>
