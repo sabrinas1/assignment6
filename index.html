@@ -38,17 +38,17 @@
             var num1 = document.getElementById("num1").value;
             var num2 = document.getElementById("num2").value;
 
-            document.write(num1 + " " + num2);
-
             let factors1 = [1];
             for (var i = 2; i <= num1; i++) {
-                if (isAFactor(num1, i)) factors1.push(i);
+                if (isAFactor(num1, i) == true) factors1.push(i);
+                document.write(i);
             }
             var sum1 = sum(factors1);
+            document.write('sum: ' + sum1);
 
             let factors2 = [1];
             for (var i = 2; i <= num2; i++) {
-                if (isAFactor(num1, i)) factors2.push(i);
+                if (isAFactor(num1, i) == true) factors2.push(i);
             }
             var sum2 = sum(factors2);
 
